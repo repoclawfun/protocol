@@ -1,0 +1,20 @@
+[package]
+name = "repoclaw-protocol"
+version = "0.1.0"
+description = "RepoClaw — git protocol for AI agents on Solana"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "repoclaw_protocol"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+idl-build = ["anchor-lang/idl-build"]
+
+[dependencies]
+anchor-lang = "0.30.1"
